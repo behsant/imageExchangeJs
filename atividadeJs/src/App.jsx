@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import "./App.css"
+import Switch from '@mui/material/Switch';
 import img1 from './assets/lampada_acesa.jpg'
 import img2 from './assets/luz_apagada.jpg'
 
@@ -11,9 +12,9 @@ function App() {
   const handleClick = () => {setlamp(!lampState);};
   return (
     <>
-    <button onClick={handleClick}>
-        {lampState ? 'Apagar' : 'Acender'}
-      </button>
+      <Switch onClick={handleClick}>{lampState ? 'Apagar' : 'Acender'}</Switch>
+        
+   
   
       <img src={lampState ? img1 : img2} alt="Lâmpada" />
     </>
